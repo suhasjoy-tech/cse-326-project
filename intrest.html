@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Interest | Maison</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+    <a class="logo" href="index.html">MAISON<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-label="Open menu">Menu</button>
+    <div class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="collections.html">Collections</a>
+        <a href="inventory.html">Inventory</a>
+        <a class="active" href="interest.html">Customer Interest</a>
+    </div>
+</nav>
+<main class="container">
+    <div class="page-heading">
+        <p class="eyebrow">Listen to your customers</p>
+        <h1>Customer Interest</h1>
+        <p>
+            Understand which styles, colors, sizes, and collections
+            attract the most attention.
+        </p>
+    </div>
+    <section class="stats-grid">
+        <div class="stat-card">
+            <p>Total Interest Records</p>
+            <div class="stat-number" id="interest-total">06</div>
+            <p>Saved customer preferences</p>
+        </div>
+        <div class="stat-card">
+            <p>Most Requested Style</p>
+            <div class="stat-number" id="interest-style">12</div>
+            <p id="interest-style-label">Floral dresses</p>
+        </div>
+        <div class="stat-card">
+            <p>Popular Color</p>
+            <div class="stat-number" id="interest-color">08</div>
+            <p id="interest-color-label">Burgundy preferences</p>
+        </div>
+        <div class="stat-card">
+            <p>High-Demand Size</p>
+            <div class="stat-number" id="interest-size">M</div>
+            <p>Medium size preference</p>
+        </div>
+    </section>
+    <section class="section grid-2">
+        <div class="panel">
+            <p class="eyebrow">Style preferences</p>
+            <h2>Popular Garments</h2>
+            <div id="popular-bars"></div>
+        </div>
+        <div class="panel">
+            <p class="eyebrow">Demand insights</p>
+            <h2>What the Data Suggests</h2>
+            <p>
+                These records update as you add new interest entries.
+                Use them to guide collection planning and inventory.
+            </p>
+            <div class="notice">
+                Submit the form on this page to add a live record.
+                Totals, charts, and the register update immediately.
+            </div>
+            <a class="btn" href="inventory.html">Review Inventory</a>
+        </div>
+    </section>
+    <section class="section panel">
+        <h2>Customer Interest Register</h2>
+        <p>
+            Example records showing garment preferences and customer
+            requests. New entries are stored in this browser.
+        </p>
+        <div class="toolbar" style="grid-template-columns: 1fr;">
+            <input type="search" id="interest-search" placeholder="Search customer, garment, color, or status">
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Reference</th>
+                        <th>Customer</th>
+                        <th>Garment</th>
+                        <th>Preferred Size</th>
+                        <th>Preferred Color</th>
+                        <th>Collection</th>
+                        <th>Interest Status</th>
+                    </tr>
+                </thead>
+                <tbody id="interest-body"></tbody>
+            </table>
+        </div>
+    </section>
+    <section class="section form-panel">
+        <p class="eyebrow">Interest entry</p>
+        <h2>Record Customer Interest</h2>
+        <p>
+            This form saves records on your device so the register and
+            dashboard counts stay up to date.
+        </p>
+        <form id="interest-form" action="#" method="get">
+            <div class="form-grid">
+                <div>
+                    <label class="field-label" for="customer">Customer Reference</label>
+                    <input type="text" id="customer" name="customer" placeholder="e.g. Customer G">
+                    <div class="field-error" id="err-customer"></div>
+                </div>
+                <div>
+                    <label class="field-label" for="garment">Garment</label>
+                    <select id="garment" name="garment">
+                        <option value="">Select a garment</option>
+                        <option>Floral Midi Dress</option>
+                        <option>Festive Fusion Set</option>
+                        <option>Royal Evening Gown</option>
+                        <option>Linen Co-ord Set</option>
+                        <option>Statement Party Dress</option>
+                        <option>Designer Occasion Dress</option>
+                    </select>
+                    <div class="field-error" id="err-garment"></div>
+                </div>
+                <div>
+                    <label class="field-label" for="size">Preferred Size</label>
+                    <select id="size" name="size">
+                        <option value="">Select a size</option>
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                    <div class="field-error" id="err-size"></div>
+                </div>
+                <div>
+                    <label class="field-label" for="color">Preferred Color</label>
+                    <input type="text" id="color" name="color" placeholder="e.g. Burgundy">
+                    <div class="field-error" id="err-color"></div>
+                </div>
+                <div>
+                    <label class="field-label" for="collection">Collection</label>
+                    <select id="collection" name="collection">
+                        <option value="">Select a collection</option>
+                        <option>Spring / Summer</option>
+                        <option>Festive</option>
+                        <option>Wedding</option>
+                        <option>Autumn / Winter</option>
+                    </select>
+                    <div class="field-error" id="err-collection"></div>
+                </div>
+                <div>
+                    <label class="field-label" for="status">Interest Status</label>
+                    <select id="status" name="status">
+                        <option>Interested</option>
+                        <option>Requested</option>
+                        <option>Awaiting Stock</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit">Save interest record</button>
+        </form>
+    </section>
+</main>
+<footer class="footer">
+    <p>MAISON. | Customer Interest Management</p>
+    <p><a href="index.html">Back to Dashboard</a></p>
+</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

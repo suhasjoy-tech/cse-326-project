@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison | Boutique Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+    <a class="logo" href="index.html">MAISON<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-label="Open menu">Menu</button>
+    <div class="nav-links">
+        <a class="active" href="index.html">Dashboard</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="collections.html">Collections</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="interest.html">Customer Interest</a>
+    </div>
+</nav>
+<main class="container">
+    <section class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">Your boutique, beautifully organized</p>
+            <h1>Every collection tells a story.</h1>
+            <p>
+                Manage seasonal collections, organize garment
+                variants, monitor inventory, and understand what
+                your customers love — all in one place.
+            </p>
+            <div class="actions">
+                <a class="btn" href="catalogue.html">Explore Catalogue</a>
+                <a class="btn btn-outline" href="collections.html">
+                    View Collections
+                </a>
+            </div>
+        </div>
+        <div class="hero-image"></div>
+    </section>
+    <section class="section">
+        <div class="section-title">
+            <div>
+                <p class="eyebrow">At a glance</p>
+                <h2>Seasonal Dashboard</h2>
+            </div>
+            <span class="tag">Live sample data</span>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <p>Total Garment Designs</p>
+                <div class="stat-number" id="stat-designs" data-count="6">06</div>
+                <p>Across the live catalogue</p>
+            </div>
+            <div class="stat-card">
+                <p>Active Collections</p>
+                <div class="stat-number" id="stat-collections" data-count="4">04</div>
+                <p>Seasonal and occasion wear</p>
+            </div>
+            <div class="stat-card">
+                <p>Available Variants</p>
+                <div class="stat-number" id="stat-variants" data-count="7">07</div>
+                <p>Sizes and colors combined</p>
+            </div>
+            <div class="stat-card">
+                <p>Customer Interests</p>
+                <div class="stat-number" id="stat-interest" data-count="6">06</div>
+                <p>Saved on this browser</p>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="section-title">
+            <div>
+                <p class="eyebrow">Explore the wardrobe</p>
+                <h2>Featured Collections</h2>
+            </div>
+            <a class="btn btn-outline" href="collections.html">
+                All Collections
+            </a>
+        </div>
+        <div class="grid-3">
+            <article class="collection-card">
+                <img
+                    src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80"
+                    alt="Elegant spring and summer clothing">
+                <div class="card-content">
+                    <span class="tag">Spring / Summer</span>
+                    <h3>Bloom Collection</h3>
+                    <p>Light fabrics, floral prints and everyday elegance.</p>
+                    <div class="actions">
+                        <a class="btn" href="catalogue.html?collection=summer">Explore</a>
+                    </div>
+                </div>
+            </article>
+            <article class="collection-card">
+                <img
+                    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80"
+                    alt="Fashion outfits for festive occasions">
+                <div class="card-content">
+                    <span class="tag">Festive</span>
+                    <h3>Celebration Edit</h3>
+                    <p>Statement outfits for special celebrations.</p>
+                    <div class="actions">
+                        <a class="btn" href="catalogue.html?collection=festive">Explore</a>
+                    </div>
+                </div>
+            </article>
+            <article class="collection-card">
+                <img
+                    src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80"
+                    alt="Elegant occasion dress">
+                <div class="card-content">
+                    <span class="tag">Wedding</span>
+                    <h3>Royal Occasion</h3>
+                    <p>Refined designs for weddings and formal events.</p>
+                    <div class="actions">
+                        <a class="btn" href="catalogue.html?collection=wedding">Explore</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="section">
+        <div class="grid-2">
+            <div class="panel">
+                <p class="eyebrow">Inventory snapshot</p>
+                <h2>Stock Overview</h2>
+                <div class="bar-item">
+                    <div class="bar-label">
+                        <span>In Stock</span><strong id="bar-in-label">72%</strong>
+                    </div>
+                    <div class="bar-track">
+                        <div class="bar-fill" id="bar-in" data-width="72%"></div>
+                    </div>
+                </div>
+                <div class="bar-item">
+                    <div class="bar-label">
+                        <span>Low Stock</span><strong id="bar-low-label">18%</strong>
+                    </div>
+                    <div class="bar-track">
+                        <div class="bar-fill" id="bar-low" data-width="18%"></div>
+                    </div>
+                </div>
+                <div class="bar-item">
+                    <div class="bar-label">
+                        <span>Out of Stock</span><strong id="bar-out-label">10%</strong>
+                    </div>
+                    <div class="bar-track">
+                        <div class="bar-fill" id="bar-out" data-width="10%"></div>
+                    </div>
+                </div>
+                <a class="btn" href="inventory.html">View Inventory</a>
+            </div>
+            <div class="panel">
+                <p class="eyebrow">Customer insights</p>
+                <h2>What Customers Love</h2>
+                <p>
+                    Understand popular styles, preferred colors,
+                    requested sizes, and garments attracting attention.
+                </p>
+                <div class="notice">
+                    <strong>Most requested style:</strong> Floral dresses
+                    <br>
+                    <strong>Popular color:</strong> Burgundy
+                    <br>
+                    <strong>Top size preference:</strong> Medium
+                </div>
+                <a class="btn" href="interest.html">View Interest Register</a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <p>MAISON. | Fashion Boutique Collection Management</p>
+    <p>Interactive website using HTML, CSS, and JavaScript</p>
+</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

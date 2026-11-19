@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasonal Collections | Maison</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+    <a class="logo" href="index.html">MAISON<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-label="Open menu">Menu</button>
+    <div class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a class="active" href="collections.html">Collections</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="interest.html">Customer Interest</a>
+    </div>
+</nav>
+<main class="container">
+    <div class="page-heading">
+        <p class="eyebrow">Curated by season</p>
+        <h1>Our Collections</h1>
+        <p>
+            Keep every garment organized according to its season,
+            occasion, style, and availability.
+        </p>
+    </div>
+    <div class="stats-grid">
+        <div class="stat-card">
+            <p>Total Collections</p>
+            <div class="stat-number">04</div>
+        </div>
+        <div class="stat-card">
+            <p>Seasonal Designs</p>
+            <div class="stat-number">06</div>
+        </div>
+        <div class="stat-card">
+            <p>Active Collections</p>
+            <div class="stat-number">03</div>
+        </div>
+        <div class="stat-card">
+            <p>Archived Collections</p>
+            <div class="stat-number">01</div>
+        </div>
+    </div>
+    <section class="filters">
+        <p class="eyebrow">Show</p>
+        <div class="filter-row">
+            <button class="btn ghost is-active" type="button" data-filter-collection="all">All</button>
+            <button class="btn ghost" type="button" data-filter-collection="active">Active</button>
+            <button class="btn ghost" type="button" data-filter-collection="archived">Archived</button>
+        </div>
+    </section>
+    <section class="section">
+        <div class="grid-2">
+            <article class="collection-card" data-collection-status="active">
+                <img
+                    src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=80"
+                    alt="Spring summer fashion">
+                <div class="card-content">
+                    <span class="tag available">Active</span>
+                    <h2>Bloom Collection</h2>
+                    <p>Season: Spring / Summer 2026</p>
+                    <p>Category: Casual and lightweight wear</p>
+                    <p>Garment designs: 2 in this catalogue</p>
+                    <p>Theme: Floral prints, pastel shades and breathable fabrics.</p>
+                    <div class="actions">
+                        <a class="btn" href="catalogue.html?collection=summer">View Garments</a>
+                        <a class="btn btn-outline" href="inventory.html">Check Stock</a>
+                    </div>
+                </div>
+            </article>
+            <article class="collection-card" data-collection-status="active">
+                <img
+                    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"
+                    alt="Festive collection outfits">
+                <div class="card-content">
+                    <span class="tag available">Active</span>
+                    <h2>Celebration Edit</h2>
+                    <p>Season: Festive 2026</p>
+                    <p>Category: Ethnic and party wear</p>
+                    <p>Garment designs: 2 in this catalogue</p>
+                    <p>Theme: Rich colors, embroidery and statement styles.</p>
+                    <div class="actions">
+                        <a class="btn" href="catalogue.html?collection=festive">View Garments</a>
+                        <a class="btn btn-outline" href="inventory.html">Check Stock</a>
+                    </div>
+                </div>
+            </article>
+            <article class="collection-card" data-collection-status="active">
+                <img
+                    src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=80"
+                    alt="Wedding collection">
+                <div class="card-content">
+                    <span class="tag available">Active</span>
+                    <h2>Royal Occasion</h2>
+                    <p>Season: Wedding 2026</p>
+                    <p>Category: Formal and designer wear</p>
+                    <p>Garment designs: 2 in this catalogue</p>
+                    <p>Theme: Elegant silhouettes and premium occasion styles.</p>
+                    <div class="actions">
+                        <a class="btn" href="catalogue.html?collection=wedding">View Garments</a>
+                        <a class="btn btn-outline" href="inventory.html">Check Stock</a>
+                    </div>
+                </div>
+            </article>
+            <article class="collection-card" data-collection-status="archived">
+                <img
+                    src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=900&q=80"
+                    alt="Autumn winter clothing">
+                <div class="card-content">
+                    <span class="tag">Archived</span>
+                    <h2>Autumn Essentials</h2>
+                    <p>Season: Autumn / Winter 2025</p>
+                    <p>Category: Layering and winter wear</p>
+                    <p>Garment designs: 10 in the original season</p>
+                    <p>Theme: Warm textures, neutral tones and timeless layers.</p>
+                    <div class="actions">
+                        <a class="btn btn-outline" href="catalogue.html">Browse Catalogue</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <div class="notice">
+        <strong>Collection management:</strong> Filter active and archived
+        seasons here. Opening a collection takes you to matching garments
+        in the catalogue.
+    </div>
+</main>
+<footer class="footer">
+    <p>MAISON. | Seasonal Collection Management</p>
+    <p><a href="index.html">Back to Dashboard</a></p>
+</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

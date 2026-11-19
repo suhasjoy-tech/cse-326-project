@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garment Catalogue | Maison</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+    <a class="logo" href="index.html">MAISON<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-label="Open menu">Menu</button>
+    <div class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a class="active" href="catalogue.html">Catalogue</a>
+        <a href="collections.html">Collections</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="interest.html">Customer Interest</a>
+    </div>
+</nav>
+<main class="container">
+    <div class="page-heading">
+        <p class="eyebrow">Discover every detail</p>
+        <h1>Garment Catalogue</h1>
+        <p>
+            Browse boutique designs by collection, style, size,
+            color, and availability.
+        </p>
+    </div>
+    <section class="filters">
+        <h3>Filter the wardrobe</h3>
+        <p class="muted">
+            Search, sort, and narrow garments without leaving the page.
+        </p>
+        <div class="catalogue-filter">
+            <input type="radio" name="collection-filter" id="filter-all" value="all" checked hidden>
+            <input type="radio" name="collection-filter" id="filter-summer" value="summer" hidden>
+            <input type="radio" name="collection-filter" id="filter-festive" value="festive" hidden>
+            <input type="radio" name="collection-filter" id="filter-wedding" value="wedding" hidden>
+            <div class="filter-row">
+                <label for="filter-all">All Designs</label>
+                <label for="filter-summer">Spring / Summer</label>
+                <label for="filter-festive">Festive</label>
+                <label for="filter-wedding">Wedding</label>
+            </div>
+        </div>
+        <div class="toolbar">
+            <input type="search" id="search-garments" placeholder="Search name, style, color, or product ID">
+            <select id="collection-select">
+                <option value="all">All collections</option>
+                <option value="summer">Spring / Summer</option>
+                <option value="festive">Festive</option>
+                <option value="wedding">Wedding</option>
+            </select>
+            <select id="availability-select">
+                <option value="all">Any availability</option>
+                <option value="available">In stock</option>
+                <option value="low-stock">Low stock</option>
+                <option value="unavailable">Out of stock</option>
+            </select>
+            <select id="size-select">
+                <option value="all">Any size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+        </div>
+        <div class="toolbar" style="grid-template-columns: 1fr auto;">
+            <select id="sort-select">
+                <option value="featured">Sort: Featured</option>
+                <option value="name">Sort: Name</option>
+                <option value="price-asc">Price: Low to high</option>
+                <option value="price-desc">Price: High to low</option>
+            </select>
+            <p class="muted" id="result-count">6 garments shown</p>
+        </div>
+    </section>
+    <section class="product-grid" id="catalogue-grid"></section>
+    <div class="notice">
+        <strong>Catalogue note:</strong> Product descriptions,
+        prices, sizes, and stock labels start as sample records.
+        Stock updates from the inventory page and saved shortlists
+        stay in this browser.
+    </div>
+</main>
+<div class="modal-backdrop" id="product-modal">
+    <div class="modal">
+        <div class="modal-body">
+            <img id="modal-image" alt="">
+            <div class="modal-content">
+                <button class="modal-close" type="button" aria-label="Close">×</button>
+                <h2 id="modal-title"></h2>
+                <div id="modal-meta"></div>
+                <div class="actions">
+                    <button class="btn" id="modal-interest" type="button">Record interest</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <p>MAISON. | Garment Catalogue</p>
+    <p><a href="index.html">Back to Dashboard</a></p>
+</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

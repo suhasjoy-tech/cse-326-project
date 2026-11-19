@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management | Maison</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+    <a class="logo" href="index.html">MAISON<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-label="Open menu">Menu</button>
+    <div class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="collections.html">Collections</a>
+        <a class="active" href="inventory.html">Inventory</a>
+        <a href="interest.html">Customer Interest</a>
+    </div>
+</nav>
+<main class="container">
+    <div class="page-heading">
+        <p class="eyebrow">Every piece accounted for</p>
+        <h1>Inventory & Variants</h1>
+        <p>
+            View product variants, track available stock,
+            and restock garments from this page.
+        </p>
+    </div>
+    <section class="stats-grid">
+        <div class="stat-card">
+            <p>Total Variants</p>
+            <div class="stat-number" id="inv-total">7</div>
+            <p>Across all garment designs</p>
+        </div>
+        <div class="stat-card">
+            <p>In Stock</p>
+            <div class="stat-number" id="inv-in">0</div>
+            <p>Available for sale</p>
+        </div>
+        <div class="stat-card">
+            <p>Low Stock</p>
+            <div class="stat-number" id="inv-low">0</div>
+            <p>Consider restocking</p>
+        </div>
+        <div class="stat-card">
+            <p>Out of Stock</p>
+            <div class="stat-number" id="inv-out">0</div>
+            <p>Currently unavailable</p>
+        </div>
+    </section>
+    <section class="filters">
+        <div class="toolbar">
+            <input type="search" id="inventory-search" placeholder="Search product ID, garment, size, or color">
+            <select id="inventory-status">
+                <option value="all">All statuses</option>
+                <option value="available">In stock</option>
+                <option value="low-stock">Low stock</option>
+                <option value="unavailable">Out of stock</option>
+            </select>
+        </div>
+    </section>
+    <section class="section panel">
+        <h2>Inventory Register</h2>
+        <p>
+            Each row represents a garment variant with a specific size
+            and color. Use Restock +1 to update quantity on this device.
+        </p>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Garment</th>
+                        <th>Collection</th>
+                        <th>Size</th>
+                        <th>Color</th>
+                        <th>Quantity</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="inventory-body"></tbody>
+            </table>
+        </div>
+    </section>
+    <section class="section grid-2">
+        <div class="panel">
+            <p class="eyebrow">Stock health</p>
+            <h2>Inventory Distribution</h2>
+            <div class="bar-item">
+                <div class="bar-label">
+                    <span>In Stock</span><strong id="inv-bar-in-label">0%</strong>
+                </div>
+                <div class="bar-track">
+                    <div class="bar-fill" id="inv-bar-in" data-width="0%"></div>
+                </div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label">
+                    <span>Low Stock</span><strong id="inv-bar-low-label">0%</strong>
+                </div>
+                <div class="bar-track">
+                    <div class="bar-fill" id="inv-bar-low" data-width="0%"></div>
+                </div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label">
+                    <span>Out of Stock</span><strong id="inv-bar-out-label">0%</strong>
+                </div>
+                <div class="bar-track">
+                    <div class="bar-fill" id="inv-bar-out" data-width="0%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <p class="eyebrow">Suggested action</p>
+            <h2>Restocking Priorities</h2>
+            <p>
+                Prioritize unavailable variants that customers request
+                frequently. Review low-stock sizes before the next
+                seasonal launch.
+            </p>
+            <div class="notice">
+                Linen Co-ord Set — Size S: currently unavailable.
+                Review replenishment needs.
+            </div>
+            <a class="btn" href="interest.html">
+                Check Customer Demand
+            </a>
+        </div>
+    </section>
+    <div class="notice">
+        Inventory quantities start as sample data. Restock actions
+        update stock labels in the catalogue on this browser.
+    </div>
+</main>
+<footer class="footer">
+    <p>MAISON. | Inventory Management</p>
+    <p><a href="index.html">Back to Dashboard</a></p>
+</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

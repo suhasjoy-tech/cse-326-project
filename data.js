@@ -1,0 +1,111 @@
+window.MaisonData = {
+  products: [
+    {
+      id: "MB101",
+      name: "Floral Midi Dress",
+      collection: "summer",
+      collectionLabel: "Spring / Summer",
+      style: "Casual / Floral",
+      sizes: ["S", "M", "L"],
+      colors: ["Pink", "White"],
+      price: 1899,
+      status: "available",
+      statusLabel: "In Stock",
+      image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80",
+      alt: "Floral summer clothing",
+      description: "A breathable midi silhouette with a soft floral print, made for daytime events and weekend brunches."
+    },
+    {
+      id: "MB102",
+      name: "Festive Fusion Set",
+      collection: "festive",
+      collectionLabel: "Festive",
+      style: "Ethnic / Contemporary",
+      sizes: ["S", "M", "L", "XL"],
+      colors: ["Burgundy", "Gold"],
+      price: 2799,
+      status: "low-stock",
+      statusLabel: "Low Stock",
+      image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80",
+      alt: "Stylish festive outfit",
+      description: "A contemporary ethnic set with rich embroidery, designed for celebrations and evening gatherings."
+    },
+    {
+      id: "MB103",
+      name: "Royal Evening Gown",
+      collection: "wedding",
+      collectionLabel: "Wedding",
+      style: "Formal / Occasion",
+      sizes: ["M", "L", "XL"],
+      colors: ["Wine", "Black"],
+      price: 5499,
+      status: "available",
+      statusLabel: "In Stock",
+      image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80",
+      alt: "Elegant wedding dress",
+      description: "A structured evening gown with a dramatic fall, suited to weddings and formal receptions."
+    },
+    {
+      id: "MB104",
+      name: "Linen Co-ord Set",
+      collection: "summer",
+      collectionLabel: "Spring / Summer",
+      style: "Minimal / Casual",
+      sizes: ["S", "M", "L"],
+      colors: ["Beige", "Ivory"],
+      price: 2299,
+      status: "available",
+      statusLabel: "In Stock",
+      image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
+      alt: "Neutral colored summer outfit",
+      description: "A relaxed linen two-piece in quiet neutrals, made for warm weather and easy layering."
+    },
+    {
+      id: "MB105",
+      name: "Statement Party Dress",
+      collection: "festive",
+      collectionLabel: "Festive",
+      style: "Party / Modern",
+      sizes: ["S", "M", "L"],
+      colors: ["Black", "Red"],
+      price: 3199,
+      status: "unavailable",
+      statusLabel: "Out of Stock",
+      image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80",
+      alt: "Fashionable statement outfit",
+      description: "A modern party dress with a sharp silhouette, intended for evening events and festive nights."
+    },
+    {
+      id: "MB106",
+      name: "Designer Occasion Dress",
+      collection: "wedding",
+      collectionLabel: "Wedding",
+      style: "Designer / Formal",
+      sizes: ["M", "L", "XL"],
+      colors: ["Rose", "Champagne"],
+      price: 4799,
+      status: "low-stock",
+      statusLabel: "Low Stock",
+      image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80",
+      alt: "Designer occasion wear",
+      description: "A designer occasion piece in rose and champagne tones, cut for ceremonies and formal dinners."
+    }
+  ],
+  inventorySeed: [
+    { id: "MB101", garment: "Floral Midi Dress", collection: "Spring / Summer", size: "M", color: "Pink", quantity: 12 },
+    { id: "MB101", garment: "Floral Midi Dress", collection: "Spring / Summer", size: "L", color: "White", quantity: 2 },
+    { id: "MB102", garment: "Festive Fusion Set", collection: "Festive", size: "M", color: "Burgundy", quantity: 5 },
+    { id: "MB103", garment: "Royal Evening Gown", collection: "Wedding", size: "L", color: "Wine", quantity: 1 },
+    { id: "MB104", garment: "Linen Co-ord Set", collection: "Spring / Summer", size: "S", color: "Beige", quantity: 0 },
+    { id: "MB105", garment: "Statement Party Dress", collection: "Festive", size: "M", color: "Black", quantity: 0 },
+    { id: "MB106", garment: "Designer Occasion Dress", collection: "Wedding", size: "XL", color: "Rose", quantity: 8 }
+  ],
+  interestSeed: [
+    { ref: "CI001", customer: "Customer A", garment: "Floral Midi Dress", size: "M", color: "Pink", collection: "Spring / Summer", status: "Interested" },
+    { ref: "CI002", customer: "Customer B", garment: "Festive Fusion Set", size: "L", color: "Burgundy", collection: "Festive", status: "Requested" },
+    { ref: "CI003", customer: "Customer C", garment: "Royal Evening Gown", size: "M", color: "Wine", collection: "Wedding", status: "Interested" },
+    { ref: "CI004", customer: "Customer D", garment: "Linen Co-ord Set", size: "S", color: "Beige", collection: "Spring / Summer", status: "Awaiting Stock" },
+    { ref: "CI005", customer: "Customer E", garment: "Floral Midi Dress", size: "L", color: "White", collection: "Spring / Summer", status: "Interested" },
+    { ref: "CI006", customer: "Customer F", garment: "Statement Party Dress", size: "M", color: "Black", collection: "Festive", status: "Requested" }
+  ]
+};
